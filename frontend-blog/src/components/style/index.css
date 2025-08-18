@@ -1,0 +1,21 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Arial';
+  font-size: 16px;
+}
+
+:root {
+  --negro: #000;
+  --test1: #00039e;
+  --test2: #e2c418;
+  --test3: #a80000;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
