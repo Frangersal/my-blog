@@ -1,59 +1,151 @@
 import React, { useState } from 'react'
 import reactLogo from '../assets/icons/react.svg'
 import viteLogo from '../assets/icons/vite.svg'
-import './style/App.css'
+import img_test from '../assets/img/image.png'
+// import './style/App.css'
+import './style/style.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [count, setCount] = useState(0)
 
-  return (
-		<div className="glossy-root">
-			<div className="glossy-vignette" aria-hidden />
+	return (
+		<>
+			<div class="container">
+				<div class="row">
 
-			{/* Hero: izquierda = tarjeta glass con info del artículo, derecha = imagen */}
-			<section className="hero-section" aria-label="Hero">
-				<div className="hero-inner">
-					<div className="hero-left">
-						<article className="hero-card">
-							<div className="hero-tags">
-								<span className="tag">Diseño</span>
-								<span className="tag">Minimalismo</span>
+					<h1 class="titulo-trend col-12">Titulo 1</h1>
+
+					<div class="section-hero">
+						<div class="hero-left">
+							<div class="hero-card">
+								<div class="card-p_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-p_title">Articulo 1</h2>
+								<p class="card-p_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-p_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-p_btn btn btn-sm btn-outline-light">Leer más</button>
+
+							</div>
+							<div class="hero_box-button">
+								<div class="box-button btn btn-outline-secondary">&lt;</div>
+								<div class="box-button btn btn-outline-secondary">&gt;</div>
 							</div>
 
-							<h2 className="hero-article-title">Rutina matutina para creatividad</h2>
-
-							<div className="hero-meta">
-								<span className="hero-author">Frank</span>
-								<span className="hero-dot">·</span>
-								<span className="hero-date">01 Ago 2025</span>
-							</div>
-
-							<p className="hero-excerpt">
-								Pequeños hábitos para empezar el día con claridad y creatividad. Un enfoque práctico para incorporar rituales que fomentan la producción de ideas.
-							</p>
-
-							<div className="hero-actions">
-								<button className="btn primary"> Leer artículo </button>
-								<button className="btn ghost"> Guardar </button>
-							</div>
-
-							{/* botones flotantes dependientes del hero-card */}
-							<div className="hero-floating" aria-hidden={false}>
-								<button className="float-btn float-left" aria-label="Anterior">&lt;</button>
-								<button className="float-btn float-right" aria-label="Siguiente">&gt;</button>
-							</div>
-						</article>
-					</div>
-
-					<div className="hero-right" aria-hidden>
-						<div
-							className="hero-image"
-							style={{ backgroundImage: "url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=80&auto=format&fit=crop')" }}
-						/>
+						</div>
+						<img class="hero-img" src={img_test} alt="Hero image"></img>
 					</div>
 				</div>
-			</section>
-		</div>
+				<div class="row">
+					<h1 class="titulo-trend col-12">Titulo 2</h1>
+
+					<p class="titulo-trend col-12">Descripcion</p>
+
+					<div class="trend-principal col-sm-12 col-md-12 col-lg-7 col-xxl-7 ">
+						<div class="trend-card">
+							<img src={img_test} alt="" class="card-c_img"></img>
+							<div class="card-c_info">
+								<div class="card-c_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-c_title">Articulo 2</h2>
+								<p class="card-c_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-c_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-c_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+
+					</div>
+					<div class="trend-right col-sm-12 col-md-12 col-lg-5 col-xxl-5 ">
+						<div class="trend_card-r">
+							<img src={img_test} alt="" class="card-r_img"></img>
+							<div class="card-r_info">
+								<div class="card-r_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-r_title">Articulo 3</h2>
+								<p class="card-r_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-r_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-r_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+
+						<div class="trend_card-r">
+							<img src={img_test} alt="" class="card-r_img"></img>
+							<div class="card-r_info">
+								<div class="card-r_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-r_title">Articulo 4</h2>
+								<p class="card-r_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-r_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-r_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+						<div class="trend_card-r">
+							<img src={img_test} alt="" class="card-r_img"></img>
+							<div class="card-r_info">
+								<div class="card-r_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-r_title">Articulo 5</h2>
+								<p class="card-r_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-r_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-r_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+
+					</div>
+					<div class="trend-bottom col-12">
+						<div class="trend_card-b">
+							<img src={img_test} alt="" class="card-b_img"></img>
+
+							<div class="card-b_info">
+								<div class="card-r_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-b_title">Articulo 6</h2>
+								<p class="card-b_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-b_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-b_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+						<div class="trend_card-b">
+							<img src={img_test} alt="" class="card-b_img"></img>
+								<div class="card-b_info">
+									<div class="card-b_category">
+										<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+										<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									</div>
+									<h2 class="card-b_title">Articulo 7</h2>
+									<p class="card-b_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+									<p class="card-b_description">Articulo descripcion bla bla bla</p>
+									<button type="button" class="card-b_btn btn btn-sm btn-outline-secondary">Leer más</button>
+								</div>
+						</div>
+						<div class="trend_card-b">
+							<img src={img_test} alt="" class="card-b_img"></img>
+							<div class="card-b_info">
+								<div class="card-r_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+								</div>
+								<h2 class="card-b_title">Articulo 8</h2>
+								<p class="card-b_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-b_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-b_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</>
 	)
 }
 
