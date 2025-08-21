@@ -7,9 +7,50 @@ import './style/style.css'
 
 function App() {
 	const [count, setCount] = useState(0)
+	const [menuOpen, setMenuOpen] = useState(false)
 
 	return (
 		<>
+			{/* NAV: responsive, más espacioso y menú móvil */}
+			<nav className="site-nav" role="navigation" aria-label="Main navigation">
+				<div className="nav-inner">
+					<div className="left-area">
+						<div className="logo-box" aria-hidden="true">
+							<span className="logo-initials">DF</span>
+						</div>
+
+						<div className="brand">
+							<span className="site-title">Daily of Fran</span>
+							<span className="site-subtitle">Historias, ideas y descubrimientos</span>
+						</div>
+					</div>
+
+					<button
+						className="nav-toggle"
+						aria-expanded={menuOpen}
+						aria-label="Abrir menú"
+						onClick={() => setMenuOpen(!menuOpen)}
+					>
+						<span className="bars" />
+					</button>
+
+					<ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+						<li className="nav-item"><a href="#">Inicio</a></li>
+						<li className="nav-item"><a href="#">Artículos</a></li>
+						<li className="nav-item"><a href="#">Categorías</a></li>
+						<li className="nav-item"><a href="#">Sobre mí</a></li>
+						<li className="nav-item"><a href="#">Contacto</a></li>
+					</ul>
+
+					<div className="nav-actions">
+						<input className="nav-search" type="search" placeholder="Buscar..." />
+						<button className="nav-cta btn">Suscribirse</button>
+					</div>
+				</div>
+
+				{/* Estilos movidos a ./style/style.css (al final del archivo) */}
+			</nav>
+
 			<div class="container">
 				<div class="row">
 
@@ -118,16 +159,16 @@ function App() {
 						</div>
 						<div class="trend_card-b">
 							<img src={img_test} alt="" class="card-b_img"></img>
-								<div class="card-b_info">
-									<div class="card-b_category">
-										<span class="badge rounded-pill text-bg-secondary">Secondary</span>
-										<span class="badge rounded-pill text-bg-secondary">Secondary</span>
-									</div>
-									<h2 class="card-b_title">Articulo 7</h2>
-									<p class="card-b_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
-									<p class="card-b_description">Articulo descripcion bla bla bla</p>
-									<button type="button" class="card-b_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							<div class="card-b_info">
+								<div class="card-b_category">
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
+									<span class="badge rounded-pill text-bg-secondary">Secondary</span>
 								</div>
+								<h2 class="card-b_title">Articulo 7</h2>
+								<p class="card-b_autor-fecha">Francisco Salinas - 24 de Diciembre de 2052</p>
+								<p class="card-b_description">Articulo descripcion bla bla bla</p>
+								<button type="button" class="card-b_btn btn btn-sm btn-outline-secondary">Leer más</button>
+							</div>
 						</div>
 						<div class="trend_card-b">
 							<img src={img_test} alt="" class="card-b_img"></img>
@@ -145,9 +186,46 @@ function App() {
 					</div>
 				</div>
 			</div>
+
+			{/* Footer: uniforme con nav (glassmorphism, claro y responsivo) */}
+			<footer className="site-footer" role="contentinfo">
+				<div className="footer-inner">
+					<div className="footer-brand">
+						<div className="logo-box small" aria-hidden="true"><span className="logo-initials">DF</span></div>
+						<div className="brand-text">
+							<span className="site-title">Daily of Fran</span>
+							<span className="site-subtitle">Historias, ideas y descubrimientos</span>
+						</div>
+					</div>
+
+					<ul className="footer-links">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Artículos</a></li>
+						<li><a href="#">Categorías</a></li>
+						<li><a href="#">Sobre mí</a></li>
+						<li><a href="#">Contacto</a></li>
+					</ul>
+
+					<div className="footer-newsletter">
+						<form onSubmit={(e) => e.preventDefault()} className="newsletter-form">
+							<input className="footer-input" type="email" placeholder="Tu correo" aria-label="Correo" />
+							<button className="nav-cta btn" type="submit">Suscribirse</button>
+						</form>
+
+						<div className="social-icons" aria-hidden="true">
+							<a href="#" className="social">T</a>
+							<a href="#" className="social">M</a>
+							<a href="#" className="social">I</a>
+						</div>
+					</div>
+				</div>
+
+				<div className="footer-bottom">
+					© {new Date().getFullYear()} Daily of Fran. Todos los derechos reservados.
+				</div>
+			</footer>
 		</>
 	)
 }
 
 export default App
-

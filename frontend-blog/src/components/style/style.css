@@ -18,7 +18,8 @@
     --blue: #0000ff;
     --magenta: #ff00ff;
     --gris: #969696;
-    --border: 24px;
+    --border-re: 30px;
+    --border-ri: 36px;
     --space-min: 8px;
     --space-max: 16px;
     /* Breakpoints de Bootstrap */
@@ -80,7 +81,7 @@
     height: 400px;
     width: 60%;
     /* background-color: var(--yellow); */
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     position: absolute;
     /* cambiado: posicionado respecto a .section-hero */
     right: 20px;
@@ -99,7 +100,7 @@
     padding: var(--space-max);
     height: 75%;
     width: 100%;
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     overflow: hidden;
     position: relative;
     background-color: var(--white-t);
@@ -128,7 +129,7 @@
     border: var(--gris) 1px solid;
     box-shadow: 0 20px 50px var(--shadow);
     backdrop-filter: blur(10px) saturate(120%);
-    border-radius: var(--border)!important;
+    border-radius: var(--border-re)!important;
     font-size: 20px!important;
     
 
@@ -190,7 +191,7 @@
     border: var(--white) 1px solid;
     box-shadow: 0 20px 50px var(--shadow);
     backdrop-filter: blur(10px) saturate(120%);
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     overflow: hidden;
 }
 
@@ -202,7 +203,7 @@
     border: var(--white) 1px solid;
     box-shadow: 0 20px 50px var(--shadow);
     backdrop-filter: blur(10px) saturate(120%);
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     display: flex;
     overflow: hidden;
 
@@ -219,7 +220,7 @@
     border: var(--white) 1px solid;
     box-shadow: 0 20px 50px var(--shadow);
     backdrop-filter: blur(10px) saturate(120%);
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     overflow: hidden;
 
 }
@@ -249,7 +250,7 @@
     border: var(--white) 1px solid;
     box-shadow: 0 20px 50px var(--shadow);
     backdrop-filter: blur(10px) saturate(120%);
-    border-radius: var(--border);
+    border-radius: var(--border-re);
     display: flex;
     overflow: hidden;
     }
@@ -283,7 +284,7 @@
 .card-p_description {}
 
 .card-p_btn {
-    border-radius: var(--border) !important;
+    border-radius: var(--border-re) !important;
 
     position: absolute;
     bottom: var(--space-max);
@@ -297,6 +298,8 @@
     width: 100%;
     display: block;
     object-fit: cover;
+    border-radius: var(--border-ri);
+    padding: var(--space-max);
 }
 
 .card-c_info {
@@ -319,7 +322,7 @@
 .card-c_description {}
 
 .card-c_btn {
-    border-radius: var(--border) !important;
+    border-radius: var(--border-re) !important;
     ;
 
     position: absolute;
@@ -334,6 +337,8 @@
     width: 158.57px;
     display: block;
     object-fit: cover;
+    border-radius: var(--border-ri);
+    padding: var(--space-max);
 }
 
 .card-r_info {
@@ -357,7 +362,7 @@
 .card-r_description {}
 
 .card-r_btn {
-    border-radius: var(--border) !important;
+    border-radius: var(--border-re) !important;
 
     position: absolute;
     bottom: var(--space-max);
@@ -367,14 +372,16 @@
 
 /* cards b */
 .card-b_img {
-    height: 40%;
+    height: 50%;
     width: 100%;
     display: block;
     object-fit: cover;
+    border-radius: var(--border-ri);
+    padding: var(--space-max);
 }
 
 .card-b_info {
-    height: 60%;
+    height: 50%;
     padding: var(--space-min);
     position: relative;
     width: 100%;
@@ -396,7 +403,7 @@
 .card-b_description {}
 
 .card-b_btn {
-    border-radius: var(--border) !important;
+    border-radius: var(--border-re) !important;
     ;
 
     position: absolute;
@@ -462,4 +469,284 @@
         font-size: 16px;
     }
 
+}
+
+/* Estilos movidos NAV desde App.jsx (nav: responsive y glassmorphism) */
+
+.site-nav{
+	position: sticky;
+	top: 12px;
+	z-index: 100;
+	display:flex;
+	justify-content:center;
+	padding:12px;
+}
+.site-nav .nav-inner{
+	width:100%;
+	max-width:1200px;
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	gap:16px;
+	padding:12px 18px;
+	border-radius:14px;
+	background: rgba(255,255,255,0.65);
+	backdrop-filter: blur(10px) saturate(120%);
+	-webkit-backdrop-filter: blur(10px) saturate(120%);
+	border: 1px solid rgba(255,255,255,0.6);
+	box-shadow: 0 8px 30px rgba(18,24,40,0.06);
+}
+.left-area{ display:flex; align-items:center; gap:12px; min-width:0; }
+.logo-box{
+	width:64px;
+	height:64px;
+	min-width:64px;
+	border-radius:12px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	background: linear-gradient(135deg, rgba(255,255,255,0.38), rgba(245,245,255,0.2));
+	border: 1px solid rgba(255,255,255,0.6);
+	box-shadow: 0 6px 14px rgba(16,24,40,0.04);
+	font-weight:800;
+	color:#222;
+	font-size:18px;
+}
+.brand{ display:flex; flex-direction:column; gap:2px; min-width:0; }
+.site-title{ font-weight:800; font-size:18px; color:#111; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; max-width:220px; }
+.site-subtitle{ font-size:12px; color:#444; opacity:0.9; }
+.nav-toggle{
+	display:none;
+	background:transparent;
+	border:none;
+	width:44px;
+	height:44px;
+	border-radius:10px;
+	align-items:center;
+	justify-content:center;
+}
+.nav-toggle .bars{
+	display:block;
+	width:22px;
+	height:2px;
+	background: #222;
+	position:relative;
+}
+.nav-toggle .bars::before, .nav-toggle .bars::after{
+	content:'';
+	position:absolute;
+	left:0;
+	width:22px;
+	height:2px;
+	background:#222;
+}
+.nav-toggle .bars::before{ top:-7px; }
+.nav-toggle .bars::after{ top:7px; }
+
+.nav-links{
+	list-style:none;
+	display:flex;
+	gap:12px;
+	margin:0;
+	padding:0;
+	margin-left:12px;
+	flex:1;
+	align-items:center;
+	justify-content:center;
+	flex-wrap:wrap;
+}
+.nav-links a{ text-decoration:none; color:#222; padding:8px 12px; border-radius:10px; transition:background .15s, color .15s; white-space:nowrap; }
+.nav-links a:hover{ background: rgba(0,0,0,0.03); }
+
+.nav-actions{ display:flex; gap:8px; align-items:center; min-width:0; }
+.nav-search{
+	padding:8px 10px;
+	border-radius:10px;
+	border:1px solid rgba(0,0,0,0.08);
+	background: rgba(255,255,255,0.9);
+	min-width:120px;
+}
+.nav-cta{
+	padding:8px 12px;
+	border-radius:10px;
+	border: none;
+	background: linear-gradient(90deg,#6c63ff,#8f7bff);
+	color:#fff;
+	font-weight:600;
+}
+
+/* Mobile */
+@media (max-width:920px){
+	.site-nav .nav-inner{ padding:10px; gap:10px; }
+	.nav-toggle{ display:flex; }
+	.nav-links{ 
+		position: absolute;
+		left:12px;
+		right:12px;
+		top:86px;
+		flex-direction:column;
+		background: rgba(255,255,255,0.95);
+		backdrop-filter: blur(8px);
+		border-radius:12px;
+		box-shadow: 0 10px 30px rgba(16,24,40,0.08);
+		padding:12px;
+		display:none;
+	}
+	.nav-links.open{ display:flex; }
+	.nav-actions{ display:none; }
+	.site-title{ max-width:140px; }
+}
+
+@media (max-width:520px){
+	.logo-box{ width:52px; height:52px; min-width:52px; }
+	.site-title{ font-size:16px; max-width:120px; }
+	.nav-links a{ padding:10px 8px; }
+}
+
+/* Ajustes: asegurar que el nav esté por encima de otros elementos (hero, imágenes) */
+.site-nav {
+    /* subir por encima de z-index altos (ej: hero-left tenía z-index:500) */
+    z-index: 2000 !important;
+}
+
+/* crear contexto de apilamiento dentro del nav */
+.site-nav .nav-inner {
+    position: relative; /* garantiza que los hijos posicionados respeten este contexto */
+    z-index: 2001;
+}
+
+/* garantizar que el menú desplegable y sus estados estén por encima */
+.nav-links,
+.nav-links.open {
+    z-index: 2002;
+}
+
+/* Footer: uniforme con nav (glassmorphism claro, responsivo) */
+.site-footer{
+    margin-top: 32px;
+    padding: 20px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.62);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 12px 30px rgba(18,24,40,0.04);
+    color: #222;
+}
+
+/* contenido interno centrado y con max-width igual al nav */
+.site-footer .footer-inner{
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    gap:20px;
+    align-items:flex-start;
+    justify-content:space-between;
+    padding: 8px 18px;
+    flex-wrap:wrap;
+}
+
+/* marca */
+.site-footer .footer-brand{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    min-width: 180px;
+}
+.logo-box.small{
+    width:48px;
+    height:48px;
+    min-width:48px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(245,245,255,0.2));
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 6px 10px rgba(16,24,40,0.04);
+    font-weight:700;
+    color:#222;
+    font-size:16px;
+}
+.site-footer .brand-text{ display:flex; flex-direction:column; gap:2px; }
+.site-footer .brand-text .site-title{ font-weight:700; font-size:16px; }
+.site-footer .brand-text .site-subtitle{ font-size:12px; color:#4a4a4a; }
+
+/* enlaces rápidos */
+.footer-links{
+    list-style:none;
+    display:flex;
+    gap:12px;
+    padding:0;
+    margin:6px 0;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.footer-links a{
+    text-decoration:none;
+    color:#222;
+    padding:6px 10px;
+    border-radius:8px;
+    transition: background .12s;
+}
+.footer-links a:hover{ background: rgba(0,0,0,0.03); }
+
+/* newsletter / social */
+.footer-newsletter{ display:flex; flex-direction:column; gap:8px; min-width:220px; max-width:340px; }
+.newsletter-form{ display:flex; gap:8px; align-items:center; }
+.footer-input{
+    flex:1;
+    padding:8px 10px;
+    border-radius:10px;
+    border:1px solid rgba(0,0,0,0.08);
+    background: rgba(255,255,255,0.9);
+}
+
+/* reutiliza .nav-cta para botón de suscripción visualmente coherente */
+
+/* iconos sociales (simples) */
+.social-icons{ display:flex; gap:8px; margin-top:4px; }
+.social{
+    display:inline-flex;
+    width:36px;
+    height:36px;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    background: rgba(0,0,0,0.03);
+    color:#222;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* bottom */
+.footer-bottom{
+    margin-top:12px;
+    text-align:center;
+    font-size:13px;
+    color:#555;
+    padding-top:10px;
+    border-top:1px solid rgba(0,0,0,0.04);
+}
+
+/* Responsivo: apilar en pantallas pequeñas */
+@media (max-width:920px){
+    .site-footer .footer-inner{ flex-direction:column; align-items:stretch; gap:12px; }
+    .footer-links{ justify-content:flex-start; }
+    .footer-newsletter{ align-items:stretch; }
+    .newsletter-form{ flex-direction:row; }
+}
+
+@media (max-width:520px){
+    .site-footer{ padding:12px; border-radius:12px; }
+    .logo-box.small{ width:44px; height:44px; min-width:44px; }
+    .footer-newsletter{ max-width:100%; }
+}
+
+/* Asegurar que el texto del botón "Suscribirse" sea blanco (evita overrides de .btn) */
+.nav-cta,
+.nav-cta.btn,
+.site-footer .nav-cta,
+.site-footer .nav-cta.btn {
+    color: #ffffff !important;
 }
